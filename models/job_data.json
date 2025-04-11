@@ -1,0 +1,32 @@
+{
+  "data_scientist": {
+    "skills": [
+      "python",
+      "statistics",
+      "machine learning",
+      "data visualization"
+    ],
+    "demand_score": 9.5,
+    "trend": "rising"
+  },
+  "web_developer": {
+    "skills": ["html", "css", "javascript", "react"],
+    "demand_score": 8.2,
+    "trend": "stable"
+  },
+  "cloud_engineer": {
+    "skills": ["aws", "linux", "docker", "kubernetes"],
+    "demand_score": 8.8,
+    "trend": "rising"
+  },
+  "ai_engineer": {
+    "skills": ["deep learning", "tensorflow", "pytorch", "mlops"],
+    "demand_score": 9.2,
+    "trend": "rising"
+  },
+  "devops_engineer": {
+    "skills": ["ci/cd", "docker", "kubernetes", "scripting"],
+    "demand_score": 8.5,
+    "trend": "rising"
+  }
+}

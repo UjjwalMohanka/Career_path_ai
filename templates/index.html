@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Career AI</title>
+    <script>
+        async function analyze() {
+            const skills = document.getElementById("skills").value;
+            const goal = document.getElementById("goal").value;
+            const res = await fetch('/analyze', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ skills, goal })
+            });
+            const data = await res.json();
+            document.getElementById("output").innerText = JSON.stringify(data, null, 2);
+        }
+    </script>
+    <link rel="stylesheet" href="static/style.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        input {
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 300px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }   
+        .skills {
+            margin-bottom: 10px;
+        }
+        .goal {
+            margin-bottom: 10px;
+        }
+        </style>
+</head>
+
+<body>
+    <h2>Career Guidance AI</h2>
+    <input id="skills" placeholder="Your Skills" />
+    <input id="goal" placeholder="Career Goal" />
+    <button onclick="analyze()">Analyze</button>
+    <pre id="output"></pre>
+</body>
+
+</html>
